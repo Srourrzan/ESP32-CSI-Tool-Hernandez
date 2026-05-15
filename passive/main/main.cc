@@ -68,13 +68,11 @@ void config_print() {
 void passive_init() {
     wifi_init_config_t cfg = WIFI_INIT_CONFIG_DEFAULT();
     ESP_ERROR_CHECK(esp_wifi_init(&cfg));
-    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_NULL));
     ESP_ERROR_CHECK(esp_wifi_start());
 
     const wifi_promiscuous_filter_t filt = {
-            .filter_mask = WIFI_PROMIS_FILTER_MASK_DATA
+            .filter_mask = WIFI_PROMIS_FILTER_MASK_MGMT | WIFI_PROMIS_FILTER_MASK_DATA
     };
-
     int curChannel = WIFI_CHANNEL;
 
     esp_wifi_set_promiscuous(true);

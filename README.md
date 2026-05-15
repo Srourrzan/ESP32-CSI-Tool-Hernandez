@@ -1,3 +1,5 @@
+This fork will contain some changes to the source code only for benchmarking against other ESP-CSI firmwares
+
 # ESP32 CSI Tool
 
 [ESP32 CSI Tool Website](https://stevenmhernandez.github.io/ESP32-CSI-Tool/)
