@@ -1,0 +1,3 @@
+[submodule "passive/components/monitoring-utils"]
+	path = passive/components/monitoring-utils
+	url = git@github.com:Srourrzan/esp32-monitoring-utils.git

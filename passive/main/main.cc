@@ -10,6 +10,8 @@
 #include "esp_log.h"
 #include "nvs_flash.h"
 
+#include "monitoring_utils.h"
+
 #include "../../_components/nvs_component.h"
 #include "../../_components/sd_component.h"
 #include "../../_components/csi_component.h"
@@ -86,5 +88,6 @@ extern "C" void app_main(void) {
     sd_init();
     passive_init();
     csi_init((char *) "PASSIVE");
+    start_resource_monitor();
     input_loop();
 }
